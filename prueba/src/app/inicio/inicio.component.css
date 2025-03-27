@@ -1,0 +1,134 @@
+.navbar {
+    position: relative; /* Para que el ::before no tape el contenido */
+    margin-top: 100px;
+    width: auto;
+    height: 600px;
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    align-items: center;
+    z-index: 1; /* Asegura que el contenido esté adelante */
+}
+
+.navbar::before {
+    content: ""; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/FondoPrincipal.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Envía el fondo hacia atrás */
+}
+
+.container {
+    position: relative; /* Evita que el contenido se solape con el fondo */
+    z-index: 2; /* Asegura que el texto esté al frente */
+    text-align: center; /* Centra el texto */
+}
+
+.card-title{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 
+         4px  4px  2px black; /* Crea el efecto de contorno negro */
+}
+
+.card-text{
+    color: white; /* Ajusta el color si es necesario */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: light;
+}
+
+.container1 {
+  margin-top: 100px;
+  width: auto;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content:center; /* Separa el título y el texto */
+  background: linear-gradient(to bottom, #1e1e1e, #FBDC6A, #1e1e1e); /* Degradado */
+  color: #000000;
+  padding: 40px;
+  margin: 150px auto;
+}
+
+.container1 .texto {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  max-width: 80%;
+  padding-right: 20px;
+}
+
+.container1 h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  color: #fff;
+  width: 45%; /* Ocupa un 20% del ancho */
+}
+
+.container1 p {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #000;
+  width: 80%; /* Ocupa el 75% del ancho */
+  padding-left: 40px;
+}
+
+.Titulo1 {
+  margin-bottom: 70px;
+  text-align: center; /* Centrar el texto */
+  padding: 1px 0; /* Espaciado arriba y abajo */
+}
+
+.Titulo1 h2 {
+  font-size: 40px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  color: #ffffff; /* Color del texto en blanco */
+  font-family: 'Montserrat', sans-serif; /* Fuente moderna */
+}
+
+.ubicacion-container {
+  display: flex;
+  width: auto;
+  margin: auto;
+}
+
+.mapa {
+  width: 50%;
+}
+
+.mapa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.descripcion {
+  width: 50%;
+  background-color: #f5d76e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.descripcion p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+  

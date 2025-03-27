@@ -1,0 +1,21 @@
+<nav *ngIf="mostrarHeader" class="color navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="logo-container">
+      <img src="assets\img\PulidoRojoLogo.png" alt="Pulido Rojo" class="logo">
+  </div>
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/inicio']" aria-current="page" href="#">Inicio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Historia de Servicios</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/pulidorojo']" aria-current="page" href="#">Iniciar Sesión</a>
+    </li>
+  </ul>
+  </div>
+</nav>

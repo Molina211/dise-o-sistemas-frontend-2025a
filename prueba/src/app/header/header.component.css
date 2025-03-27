@@ -1,0 +1,81 @@
+.navbar::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/fondoInicioSesion.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px;
+    filter: brightness(60%); /* Reduce el brillo de la imagen */
+    z-index: -1; /* Lo pone en el fondo */
+}
+
+.logo-container {
+    width: 240px; /* Tamaño del contenedor */
+    height: 80px;
+    border-radius: 40px; /* Ajusta solo los extremos sin hacer el contenedor ovalado */
+    overflow: hidden; /* Recorta la imagen que sobresalga */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1px; /* Ajusta según necesites */
+}
+
+.logo {
+    width: 110%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+.navbar {
+    width: auto;
+    height: 150px;
+    background-color: rgba(118, 5, 4, 0.8);
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    align-items: center;
+    padding: 15px 0;
+  }
+
+.nav-item {
+    margin: 0 60px; /* Espaciado entre elementos */
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item .nav-link {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efecto de subrayado ajustado al texto */
+.nav-item::after {
+    content: "";
+    color:white;
+    position: absolute;
+    left: 50%;
+    bottom: 10px; /* Ajusta la distancia de la línea */
+    width: 0; /* Empieza oculta */
+    height: 1px; /* Grosor de la línea */
+    background-color: white; /* Color de la línea */
+    transform: translateX(-50%); /* Centra la línea debajo del texto */
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+    width: 100%; /* Se expande solo al ancho del texto */
+}
+
+/* Si está activo (en la página actual), que tenga la línea por defecto */
+.nav-item.active::after {
+    width: 100%;
+}
